@@ -4,13 +4,13 @@ document.getElementById('blog-btn').addEventListener('click', function () {
 
 })
 
-let count = 0;
+let count = 0; //initial count = 0
 
 // triangle calculation
 document.getElementById('first-card-calculation').addEventListener('click', function () {
-  count += 1;
   const cardValue = getTitleAndInputValue("first-card-title", "first-card-first-input", "first-card-second-input")
   const totalArea = (.5 * parseFloat(cardValue.cardFirstInputValue) * parseFloat(cardValue.cardSecondInputValue)).toFixed(2);
+  count += 1;
   // console.log(totalArea);
   displayAreaTotal(cardValue.cardTitleName, totalArea);
 
@@ -18,9 +18,9 @@ document.getElementById('first-card-calculation').addEventListener('click', func
 
 // rectangle calculation
 document.getElementById('second-card-calculation').addEventListener('click', function () {
-  count += 1;
   const cardValue = getTitleAndInputValue("second-card-title", "second-card-first-input", "second-card-second-input")
   const totalArea = (parseFloat(cardValue.cardFirstInputValue) * parseFloat(cardValue.cardSecondInputValue)).toFixed(2);
+  count += 1;
   // console.log(totalArea);
   displayAreaTotal(cardValue.cardTitleName, totalArea);
 
@@ -28,9 +28,9 @@ document.getElementById('second-card-calculation').addEventListener('click', fun
 
 // parallelogram calculation
 document.getElementById('third-card-calculation').addEventListener('click', function () {
-  count += 1;
   const cardValue = getTitleAndInputValue("third-card-title", "third-card-first-input", "third-card-second-input")
   const totalArea = (parseFloat(cardValue.cardFirstInputValue) * parseFloat(cardValue.cardSecondInputValue)).toFixed(2);
+  count += 1;
   // console.log(totalArea);
   displayAreaTotal(cardValue.cardTitleName, totalArea);
 
@@ -38,9 +38,9 @@ document.getElementById('third-card-calculation').addEventListener('click', func
 
 // rhombus calculation
 document.getElementById('fourth-card-calculation').addEventListener('click', function () {
-  count += 1;
   const cardValue = getTitleAndInputValue("fourth-card-title", "fourth-card-first-input", "fourth-card-second-input")
   const totalArea = (.5 * parseFloat(cardValue.cardFirstInputValue) * parseFloat(cardValue.cardSecondInputValue)).toFixed(2);
+  count += 1;
   // console.log(totalArea);
   displayAreaTotal(cardValue.cardTitleName, totalArea);
 
@@ -48,9 +48,9 @@ document.getElementById('fourth-card-calculation').addEventListener('click', fun
 
 // pentagon calculation
 document.getElementById('fifth-card-calculation').addEventListener('click', function () {
-  count += 1;
   const cardValue = getTitleAndInputValue("fifth-card-title", "fifth-card-first-input", "fifth-card-second-input")
   const totalArea = (.5 * parseFloat(cardValue.cardFirstInputValue) * parseFloat(cardValue.cardSecondInputValue)).toFixed(2);
+  count += 1;
   // console.log(totalArea);
   displayAreaTotal(cardValue.cardTitleName, totalArea);
 
@@ -58,11 +58,11 @@ document.getElementById('fifth-card-calculation').addEventListener('click', func
 
 // ellipse calculation
 document.getElementById('sixth-card-calculation').addEventListener('click', function () {
-  count += 1;
-  const cardValue = getTitleAndInputValue("sixth-card-title", "sixth-card-first-input", "sixth-card-second-input")
 
+  const cardValue = getTitleAndInputValue("sixth-card-title", "sixth-card-first-input", "sixth-card-second-input")
   const totalArea = (3.14 * parseFloat(cardValue.cardFirstInputValue) * parseFloat(cardValue.cardSecondInputValue)).toFixed(2);
 
+  count += 1;
   // console.log(totalArea);
   displayAreaTotal(cardValue.cardTitleName, totalArea);
 
@@ -76,8 +76,10 @@ function getTitleAndInputValue(title, firstInput, secondInput) {
   const cardTitle = document.getElementById(title).innerText;
   const cardFirstInput = document.getElementById(firstInput).value;
   const cardSecondInput = document.getElementById(secondInput).value;
-  if (((cardFirstInput == "" || cardSecondInput === "") || (cardFirstInput <= 0 || cardSecondInput <= 0)) || (isNaN(cardFirstInput) || isNaN(cardSecondInput))) {
-    alert("please provide valid positive number !!! Your input values are not valid !!! Try again Please!!! ");
+
+  // validation checking for all cards
+  if (((cardFirstInput === "" || cardSecondInput === "") || (cardFirstInput <= 0 || cardSecondInput <= 0)) || (isNaN(cardFirstInput) || isNaN(cardSecondInput))) {
+    alert("Please provide valid positive number !!! Your input values are not valid !!! Try again Please!!! ");
     return;
   }
 
