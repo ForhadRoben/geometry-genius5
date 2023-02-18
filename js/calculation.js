@@ -138,3 +138,30 @@ function displayAreaTotal(cardName, total) {
 //   const convertValues = (elementId);
 //   convertValues[0].innerText = newValue;
 // }
+
+const cardBgColors = document.getElementsByClassName('card-bg');
+for (const bgColor of cardBgColors) {
+  function random(number) {
+    return Math.floor(Math.random() * (number + 1));
+  }
+  bgColor.addEventListener('mouseenter', function () {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    bgColor.style.backgroundColor = rndCol;
+
+  })
+}
+
+// function cardBackground() {
+//   // document.body.style.backgroundColor = 'blue';
+//   // const btn = document.querySelector('button');
+
+// function random(number) {
+//   return Math.floor(Math.random() * (number + 1));
+// }
+
+//   makeBlueButton.addEventListener(() => {
+//     const rndCol = `rgb(${random(45)}, ${random(255)}, ${random(255)})`;
+//     document.body.style.backgroundColor = rndCol;
+//     console.log(rndCol);
+//   });
+// }
