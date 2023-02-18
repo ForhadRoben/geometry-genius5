@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
     <script src="https://kit.fontawesome.com/463e98b73c.js" crossorigin="anonymous"></script>
+    <!-- daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="container mx-auto">
+    <!-- header part -->
     <header>
         <div class=" mt-4 rounded bg-blue-100 flex items-center justify-between px-4">
             <div>
@@ -24,7 +27,7 @@
     </header>
     <main>
         <section class="mt-6 flex flex-col md:flex-row ">
-            <div class="w-full md:w-8/12 lg:w-4/6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="w-full md:w-7/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="card card-bg w-full bg-base-100 py-8 border rounded">
                     <figure><img class="py-8" src="./images/triangle.png" alt="triangle" /></figure>
                     <div class="card-body text-center ">
@@ -137,11 +140,11 @@
                 </div>
 
             </div>
-            <div class="w-full md:w-4/12 lg:w-2/6">
+            <div class="w-10/12 md:w-5/12">
                 <h1 class="text-2xl text-center font-bold underline mt-5">Area Calculation
                 </h1>
-                <div class="overflow-x-auto md:overflow-x-visible">
-                    <table class="table w-full">
+                <div class="overflow-x-hidden ">
+                    <table class="table w-10/12">
                         <thead>
                         </thead>
                         <tbody id="table-container">

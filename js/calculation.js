@@ -74,9 +74,12 @@ document.getElementById('sixth-card-calculation').addEventListener('click', func
 function getTitleAndInputValue(title, firstInput, secondInput) {
 
   const cardTitle = document.getElementById(title).innerText;
-  const cardFirstInput = document.getElementById(firstInput).value;
-  const cardSecondInput = document.getElementById(secondInput).value;
-
+  const firstCard = document.getElementById(firstInput);
+  const cardFirstInput = firstCard.value;
+  const secondCard = document.getElementById(secondInput);
+  const cardSecondInput = secondCard.value;
+  firstCard.value = '';
+  secondCard.value = '';
   // validation checking for all cards
   if (((cardFirstInput === "" || cardSecondInput === "") || (cardFirstInput <= 0 || cardSecondInput <= 0)) || (isNaN(cardFirstInput) || isNaN(cardSecondInput))) {
     alert("Please provide valid positive number !!! Your input values are not valid !!! Try again Please!!! ");
@@ -100,7 +103,8 @@ function displayAreaTotal(cardName, total) {
   tr.innerHTML = `
       <td>${count}</td>
       <td>${cardName}</td>
-      <td class="abc">${total}<span>cm<sup>2</sup></span></td>
+      <td id="newValue">${total}</td>
+      <td id="cm2><span>cm<sup>2</sup></span></td>
       <td>
       <button class="btn btn-accent text-white normal-case convert">Convert To m<sup>2</sup></button>
       <button class="btn btn-outline btn-error delete-btn">Delete</button></td>
@@ -108,19 +112,17 @@ function displayAreaTotal(cardName, total) {
     `;
   tableContainer.appendChild(tr);
 
-  const convertValues = document.querySelectorAll(".convert");
+  const convertValues = document.getElementsByClassName('convert');
   for (const value of convertValues) {
+    // console.log(value);
     value.addEventListener('click', function (e) {
-      // console.log(e.target.parentNode.parentNode.childNodes[3].childNodes[0]);
-      // let convertValue = totalArea / 10000;
-      const convertValues = e.target.parentNode.parentNode.childNodes[3].childNodes[0];
-      const cls = document.getElementsByClassName('abc')
-      for (const cl of cls) {
-        const convertToM2 = (parseFloat(convertValues.data / 10000));
-        cl.innerText = convertToM2;
-      }
-      // .innerText = convertToM2
-      // convertValue.innerText = newValue;
+      document.getElementById('cm2').style.display = 'none'
+      // console.log(parseFloat(e.target.parentNode.parentNode.childNodes[5].innerText * .0001));
+      const convertValue = e.target.parentNode.parentNode.childNodes[5].innerText;
+      const convertToM2 = (parseFloat(convertValue * 0.0001));
+      document.getElementById('newValue').innerText = convertToM2;
+
+
     })
   }
 
@@ -139,29 +141,15 @@ function displayAreaTotal(cardName, total) {
 //   convertValues[0].innerText = newValue;
 // }
 
+// background card design
 const cardBgColors = document.getElementsByClassName('card-bg');
 for (const bgColor of cardBgColors) {
   function random(number) {
     return Math.floor(Math.random() * (number + 1));
   }
   bgColor.addEventListener('mouseenter', function () {
-    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-    bgColor.style.backgroundColor = rndCol;
+    const randomCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    bgColor.style.backgroundColor = randomCol;
 
   })
 }
-
-// function cardBackground() {
-//   // document.body.style.backgroundColor = 'blue';
-//   // const btn = document.querySelector('button');
-
-// function random(number) {
-//   return Math.floor(Math.random() * (number + 1));
-// }
-
-//   makeBlueButton.addEventListener(() => {
-//     const rndCol = `rgb(${random(45)}, ${random(255)}, ${random(255)})`;
-//     document.body.style.backgroundColor = rndCol;
-//     console.log(rndCol);
-//   });
-// }
