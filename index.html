@@ -26,6 +26,7 @@
         </div>
     </header>
     <main>
+        <!-- card style -->
         <section class="mt-6 flex flex-col md:flex-row ">
             <div class="w-full md:w-7/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="card card-bg w-full bg-base-100 py-8 border rounded">
@@ -33,15 +34,15 @@
                     <div class="card-body text-center ">
                         <h2 id="first-card-title" class="text-2xl font-bold">Triangle</h2>
                         <p>Area (A) = 0.5 &#215; b &#215; h </p>
-                        <button><i class="far fa-edit" id="click-edit"></i></button>
+                        <button class="click-edit"><i class="far fa-edit"></i></button>
                         <div class="flex justify-evenly py-2 ">
                             <input id="first-card-first-input" class="bg-gray-200 outline-none w-4/12 inline "
-                                type="text" name="" placeholder="  b">
+                                type="text" name="" placeholder="  b" disabled>
                             <p>cm</p>
-                            <input id="first-card-second-input" class="bg-gray-200 outline-none w-4/12 inline"
-                                type="text" name="" placeholder="  h">
+                            <input id="first-card-second-input" class="bg-gray-200 outline-none w-4/12 inline "
+                                type="text" name="" placeholder="  h" disabled>
                             <p>cm</p>
-                            <input id="" class="bg-gray-200  w-6 h-6" type="checkbox" name="">
+                            <input class="bg-gray-200  w-6 h-6 " type="checkbox" name="" disabled>
                         </div>
                         <button id="first-card-calculation" class="btn btn-info font-bold text-white">Calculate</button>
                     </div>
@@ -51,15 +52,15 @@
                     <div class="card-body text-center ">
                         <h2 id="second-card-title" class="text-2xl font-bold">Rectangle</h2>
                         <p>Area (A) = w &#215; l </p>
-                        <p><i class="far fa-edit"></i></p>
+                        <button class="click-edit"><i class="far fa-edit"></i></button>
                         <div class="flex justify-evenly py-2 ">
                             <input class="bg-gray-200 outline-none w-4/12 inline " type="text" name=""
-                                id="second-card-first-input" placeholder="  w">
+                                id="second-card-first-input" placeholder="  w" disabled>
                             <p>cm</p>
                             <input class="bg-gray-200 outline-none w-4/12 inline" type="text" name=""
-                                id="second-card-second-input" placeholder="  l">
+                                id="second-card-second-input" placeholder="  l" disabled>
                             <p>cm</p>
-                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="">
+                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="" disabled>
                         </div>
                         <button id="second-card-calculation"
                             class="btn btn-info font-bold text-white">Calculate</button>
@@ -70,15 +71,15 @@
                     <div class="card-body text-center ">
                         <h2 id="third-card-title" class="text-2xl font-bold ">Parallelogram</h2>
                         <p>Area (A) = b &#215; h </p>
-                        <p><i class="far fa-edit"></i></p>
+                        <button class="click-edit"><i class="far fa-edit"></i></button>
                         <div class="flex justify-evenly py-2 ">
                             <input class="bg-gray-200 outline-none w-4/12 inline " type="text" name=""
-                                id="third-card-first-input" placeholder="  b">
+                                id="third-card-first-input" placeholder="  b" disabled>
                             <p>cm</p>
                             <input class="bg-gray-200 outline-none w-4/12 inline" type="text" name=""
-                                id="third-card-second-input" placeholder="  h">
+                                id="third-card-second-input" placeholder="  h" disabled>
                             <p>cm</p>
-                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="">
+                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="" disabled>
                         </div>
                         <button id="third-card-calculation" class="btn btn-info font-bold text-white">Calculate</button>
                     </div>
@@ -88,15 +89,15 @@
                     <div class="card-body text-center ">
                         <h2 id="fourth-card-title" class="text-2xl font-bold">Rhombus</h2>
                         <p>Area (A) = 0.5 &#215; d<sub>1</sub> &#215; d<sub>2</sub> </p>
-                        <p><i class="far fa-edit"></i></p>
+                        <button class="click-edit"><i class="far fa-edit"></i></button>
                         <div class="flex justify-evenly py-2 ">
                             <input class="bg-gray-200 outline-none w-4/12 inline " type="text" name=""
-                                id="fourth-card-first-input" placeholder="  d1">
+                                id="fourth-card-first-input" placeholder="  d1" disabled>
                             <p>cm</p>
                             <input class="bg-gray-200 outline-none w-4/12 inline" type="text" name=""
-                                id="fourth-card-second-input" placeholder="  d2">
+                                id="fourth-card-second-input" placeholder="  d2" disabled>
                             <p>cm</p>
-                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="">
+                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="" disabled>
                         </div>
                         <button id="fourth-card-calculation"
                             class="btn btn-info font-bold text-white">Calculate</button>
@@ -107,15 +108,15 @@
                     <div class="card-body text-center ">
                         <h2 id="fifth-card-title" class="text-2xl font-bold">Pentagon</h2>
                         <p>Area (A) = 0.5 &#215; p &#215; b </p>
-                        <p><i class="far fa-edit"></i></p>
+                        <button class="click-edit"><i class="far fa-edit"></i></button>
                         <div class="flex justify-evenly py-2 ">
                             <input class="bg-gray-200 outline-none w-4/12 inline " type="text" name=""
-                                id="fifth-card-first-input" placeholder="  p">
+                                id="fifth-card-first-input" placeholder="  p" disabled>
                             <p>cm</p>
                             <input class="bg-gray-200 outline-none w-4/12 inline" type="text" name=""
-                                id="fifth-card-second-input" placeholder="  b">
+                                id="fifth-card-second-input" placeholder="  b" disabled>
                             <p>cm</p>
-                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="">
+                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="" disabled>
                         </div>
                         <button id="fifth-card-calculation" class="btn btn-info font-bold text-white">Calculate</button>
                     </div>
@@ -125,15 +126,15 @@
                     <div class="card-body text-center ">
                         <h2 id="sixth-card-title" class="text-2xl font-bold">Ellipse</h2>
                         <p>Area (A) = &pi; a b </p>
-                        <p><i class="far fa-edit"></i></p>
+                        <button class="click-edit"><i class="far fa-edit"></i></button>
                         <div class="flex justify-evenly py-2 ">
                             <input class="bg-gray-200 outline-none w-4/12 inline " type="text" name=""
-                                id="sixth-card-first-input" placeholder="  a">
+                                id="sixth-card-first-input" placeholder="  a" disabled>
                             <p>cm</p>
                             <input class="bg-gray-200 outline-none w-4/12 inline" type="text" name=""
-                                id="sixth-card-second-input" placeholder="  b">
+                                id="sixth-card-second-input" placeholder="  b" disabled>
                             <p>cm</p>
-                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="">
+                            <input class="bg-gray-200  w-6 h-6" type="checkbox" name="" id="" disabled>
                         </div>
                         <button id="sixth-card-calculation" class="btn btn-info font-bold text-white">Calculate</button>
                     </div>
@@ -154,6 +155,7 @@
             </div>
         </section>
     </main>
+    <script src="./js/common.js"></script>
     <script src="./js/calculation.js"></script>
 </body>
 
