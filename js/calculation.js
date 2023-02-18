@@ -1,3 +1,9 @@
+// blog link 
+document.getElementById('blog-btn').addEventListener('click', function () {
+  window.location.href = 'blog.html';
+
+})
+
 // triangle calculation
 document.getElementById('first-card-calculation').addEventListener('click', function () {
 

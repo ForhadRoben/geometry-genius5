@@ -10,8 +10,94 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-
+<body class="container mx-auto">
+    <header>
+        <div class=" mt-4 rounded bg-blue-100 flex items-center justify-between px-4">
+            <div>
+                <h1 class="text-gray-500 font-bold text-4xl">Interactive</h1>
+                <p class="text-gray-400 text-2xl">Geometry
+                    Genius</p>
+            </div>
+            <button class="btn btn-accent text-white font-bold px-5">Blog</button>
+        </div>
+    </header>
+    <main class="mt-5">
+        <article class="mt-5">
+            <div tabindex="0" class="collapse collapse-plus rounded border border-base-300 bg-base-100 rounded-box">
+                <div class="collapse-title text-xl font-medium">
+                    1.What is DOM and what is the purpose of DOM?
+                </div>
+                <div class="collapse-content">
+                    <p class="font-bold">DOM(Document Object Model) a programming interface that allows us to create,
+                        change, or remove
+                        elements from the document. We can also add events to these elements to make our page more
+                        dynamic.Every HTML element in the DOM tree is a node .DOM functions as a bridge that makes the
+                        webpage dynamic using the JavaScript language.One of the main purpose is that we can manipulate
+                        css styles ,html tags ,elements etc with javaScript interaction.DOM helps us to create dynamic
+                        HTML.
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article class="mt-5">
+            <div tabindex="0" class="collapse collapse-plus rounded border border-base-300 bg-base-100 rounded-box">
+                <div class="collapse-title text-xl font-medium">
+                    2.How will you select HTML elements using DOM? Name the DOM methods.
+                </div>
+                <div class="collapse-content">
+                    <p class="font-bold">5 most common ways in which we can select elements in a DOM using selectors
+                        getElementsByTagName() -->We can select HTML elements by tag name using this method and it
+                        returns an array-like object like html collections for all child elements with the given tag
+                        name
+                        querySelectorAll() --> can use this method to select elements that matches the specified CSS
+                        selector and it gives us nodeLists for all elements with the given selector.
+                        querySelector: this method only returns the first element that matches the specified CSS
+                        selector in the document.
+                        getElementsByClassName(): we use this method for selecting all the elements having specific
+                        class names. This method returns an array-like object of all child elements which have all of
+                        the given class names
+                        getElementById(): this method is the easiest way to find an HTML element in the DOM tree and we
+                        use this methods regularly.
+                        Some Important DOM Manipulation Methods and properties we use in regular basis in JavaScript
+                        like: createElement() ,appendChild() ,innerHTML
+                        ,innerText,getAttribute(),setAttribute(),removeAttribute etc...</p>
+                </div>
+            </div>
+        </article>
+        <article class="mt-5">
+            <div tabindex="0" class="collapse collapse-plus rounded border border-base-300 bg-base-100 rounded-box">
+                <div class="collapse-title text-xl font-medium">
+                    3.What is event bubble?
+                </div>
+                <div class="collapse-content">
+                    <p class="font-bold">Event bubbling is a method of event propagation when an event is in an element
+                        inside another
+                        element, and both elements have registered a handle to that event. In event bubbling, the event
+                        is first captured and handled by the innermost element and then propagated to outer elements.In
+                        an event, capturing stage starts from top to bottom and when capturing stage reached the target
+                        phase, then even bubbling stage starts from bottom to top.we can stop event bubbling by
+                        event.stopPropagation(),event.stopImmediatePropagation() etc... when event reached the target
+                        phase.</p>
+                </div>
+            </div>
+        </article>
+        <article class="mt-5">
+            <div tabindex="0" class="collapse collapse-plus rounded border border-base-300 bg-base-100 rounded-box">
+                <div class="collapse-title text-xl font-medium">
+                    4.What is a callback function and why will you use it?
+                </div>
+                <div class="collapse-content">
+                    <p class="font-bold">A callback function is a function that passed as an argument to another
+                        function.We use callback
+                        functions because Callbacks ensure that the function will not run before the task is completed
+                        but will run right after the task is completed. It develops asynchronous JavaScript code and
+                        keeps them safe from errors. In JavaScript, the way to create a callback function is to pass it
+                        as a parameter to another function and then call it back after the task is completed.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script src="./js/calculation.js"></script>
 </body>
 
 </html>
